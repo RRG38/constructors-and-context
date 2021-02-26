@@ -19,6 +19,15 @@
 
 //Code Here
 
+const user = {
+  username: 'Ryan',
+  email: 'rgmail',
+  getUsername: function() {
+    return this.username
+  }
+}
+
+
 ////////// PROBLEM 2 //////////
 
 /*
@@ -39,6 +48,9 @@ function Animal(name, species, food) {
 
 //Code Here
 
+const animal1 = new Animal('Axel', 'Tiger', 'Steak');
+
+
 ////////// PROBLEM 3 //////////
 
 /*
@@ -57,6 +69,8 @@ let who = {
 
 //Code Here
 
+const whoSaysHi = sayHi.bind(who, 'ALOHA');
+
 ////////// PROBLEM 4 //////////
 
 /*
@@ -68,7 +82,7 @@ function whatIsThis() {
 }
 
 // uncomment the line below and tell us what the context of "this" is for whatIsThis()
-//let context1 = ???
+let context1 = 'implicit';
 
 let product = {
   name: 'snake plant',
@@ -80,7 +94,7 @@ let product = {
 let func = whatIsThis.bind(product)
 
 // uncomment the line below and tell us what the context of "this" is when we invoke func
-//let context2 = ???
+let context2 = 'explicit';
 
 let vacation = {
   location: 'Hawaii',
